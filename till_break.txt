@@ -1,0 +1,462 @@
+$ git init
+Reinitialized existing Git repository in C:/Users/Om Computers/OneDrive/Desktop/.git
+/
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop (new_file)
+$ git clone https://github.com/trupti-04oct/tr-repo.git
+fatal: destination path 'tr-repo' already exists and is not an empty directory.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop (new_file)
+$ cd tr-repo
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (main)
+$ git branch
+* main
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (main)
+$ git checkout -b "branch1"
+Switched to a new branch 'branch1'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git checkout -b "branch2"
+Switched to a new branch 'branch2'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (main)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git checkout branch2
+Switched to branch 'branch2'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch2)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (main)
+$ git switch branch2
+Switched to branch 'branch2'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch2)
+$ git switch branch1
+Switched to branch 'branch1'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git checkout -b "branch3"
+Switched to a new branch 'branch3'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch3)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ echo "created a branch 1" > bfile1.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ echo "sdhjgsjf sudfygshdufs syfdgstyfs" > bfile2.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ ls
+bfile1.txt  bfile2.txt  file1.txt  tr-repo/
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git status
+On branch branch1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        bfile1.txt
+        bfile2.txt
+        tr-repo/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ rm bfile2.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ ls
+bfile1.txt  file1.txt  tr-repo/
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git status
+On branch branch1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        bfile1.txt
+        tr-repo/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git checkout --bfile2.txt
+error: unknown option `bfile2.txt'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --[no-]guess          second guess 'git checkout <no-such-branch>' (default)
+    --[no-]overlay        use overlay mode (default)
+    -q, --[no-]quiet      suppress progress reporting
+    --[no-]recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --[no-]progress       force progress reporting
+    -m, --[no-]merge      perform a 3-way merge with the new branch
+    --[no-]conflict <style>
+                          conflict style (merge, diff3, or zdiff3)
+    -d, --[no-]detach     detach HEAD at named commit
+    -t, --[no-]track[=(direct|inherit)]
+                          set branch tracking configuration
+    -f, --[no-]force      force checkout (throw away local modifications)
+    --[no-]orphan <new-branch>
+                          new unborn branch
+    --[no-]overwrite-ignore
+                          update ignored files (default)
+    --[no-]ignore-other-worktrees
+                          do not check if another worktree is using this branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --[no-]patch      select hunks interactively
+    -U, --unified <n>     generate diffs with <n> lines context
+    --inter-hunk-context <n>
+                          show context between diff hunks up to the specified number
+ of lines
+    --[no-]ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --[no-]pathspec-from-file <file>
+                          read pathspec from file
+    --[no-]pathspec-file-nul
+                          with --pathspec-from-file, pathspec elements are separated
+ with NUL character
+
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git checkout -- bfile2.txt
+error: pathspec 'bfile2.txt' did not match any file(s) known to git
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (main)
+$ git checkout -- bfile2.txt
+error: pathspec 'bfile2.txt' did not match any file(s) known to git
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (main)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ echo "jmhgsadystd hsdgyfwgyd" > bfile2.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ ls
+bfile1.txt  bfile2.txt  file1.txt  tr-repo/
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git add .
+warning: in the working copy of 'bfile1.txt', LF will be replaced by CRLF the next t
+ime Git touches it
+warning: in the working copy of 'bfile2.txt', LF will be replaced by CRLF the next t
+ime Git touches it
+warning: adding embedded git repository: tr-repo
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> tr-repo
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached tr-repo
+hint:
+hint: See "git help submodule" for more information.
+hint: Disable this message with "git config set advice.addEmbeddedRepo false"
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ cd tr-repo
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (main)
+$ rm -rf .git
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ cd ..
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git add tr-repo
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git commit -m "Added tr-repo as normal folder"
+[branch1 8a5e5ba] Added tr-repo as normal folder
+ 3 files changed, 3 insertions(+)
+ create mode 100644 bfile1.txt
+ create mode 100644 bfile2.txt
+ create mode 160000 tr-repo
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git status
+On branch branch1
+nothing to commit, working tree clean
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ ls
+bfile1.txt  bfile2.txt  file1.txt  tr-repo/
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git add bfile.txt
+fatal: pathspec 'bfile.txt' did not match any files
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git commit -m "new version 3"
+On branch branch1
+nothing to commit, working tree clean
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git push origin branch1
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (7/7), 609 bytes | 87.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/trupti-04oct/tr-repo/pull/new/branch1
+remote:
+To https://github.com/trupti-04oct/tr-repo.git
+ * [new branch]      branch1 -> branch1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git init
+Reinitialized existing Git repository in C:/Users/Om Computers/OneDrive/Desktop/tr-r
+epo/.git/
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ git clone https://github.com/trupti-04oct/tr-repo.git
+fatal: destination path 'tr-repo' already exists and is not an empty directory.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo (branch1)
+$ cd tr-repo
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ ls
+ file1.txt   file2.txt  'git commands.txt'   git-word.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ git branch
+* branch1
+  branch2
+  branch3
+  main
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ git checkout branch1
+Already on 'branch1'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ ls
+ file1.txt   file2.txt  'git commands.txt'   git-word.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ rm file2.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ ls
+ file1.txt  'git commands.txt'   git-word.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ new_file.txt
+bash: new_file.txt: command not found
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ echo "  jahysfdyaTDSDS " > new_file.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ git add new_file.txt
+fatal: in unpopulated submodule 'tr-repo'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ git commit -m "new version4"
+On branch branch1
+nothing to commit, working tree clean
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ rm -rf tr-repo
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ git add .
+fatal: in unpopulated submodule 'tr-repo'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ git submodule deinit -f tr-repo
+error: pathspec 'tr-repo' did not match any file(s) known to git
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ git push origin breanch1
+error: src refspec breanch1 does not match any
+error: failed to push some refs to 'https://github.com/trupti-04oct/tr-repo.git'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ git push origin branch1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 488 bytes | 488.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/trupti-04oct/tr-repo.git
+   8a5e5ba..e7f4266  branch1 -> branch1
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ git pull origin main
+From https://github.com/trupti-04oct/tr-repo
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch1)
+$ git checkout main
+warning: unable to rmdir 'tr-repo': Directory not empty
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (main)
+$ git pull origin main
+From https://github.com/trupti-04oct/tr-repo
+ * branch            main       -> FETCH_HEAD
+Updating 0f80a5d..fb2e1a8
+Fast-forward
+ file1.txt        |   1 +
+ file2.txt        |   3 ++
+ git commands.txt |  47 +++++++++++++++++++
+ git-word.txt     | 137 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 188 insertions(+)
+ create mode 100644 file2.txt
+ create mode 100644 git commands.txt
+ create mode 100644 git-word.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (main)
+$ git checkout branch2
+Switched to branch 'branch2'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch2)
+$ touch fileA.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch2)
+$ git add .
+warning: in the working copy of 'tr-repo/file1.txt', LF will be replaced by CRLF the
+ next time Git touches it
+warning: in the working copy of 'tr-repo/new_file.txt', LF will be replaced by CRLF
+the next time Git touches it
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch2)
+$ git commit -m "verion5"
+[branch2 e877496] verion5
+ 5 files changed, 187 insertions(+)
+ create mode 100644 tr-repo/file1.txt
+ create mode 100644 tr-repo/fileA.txt
+ create mode 100644 tr-repo/git commands.txt
+ create mode 100644 tr-repo/git-word.txt
+ create mode 100644 tr-repo/new_file.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch2)
+$ git push origin branch2
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.99 KiB | 406.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'branch2' on GitHub by visiting:
+remote:      https://github.com/trupti-04oct/tr-repo/pull/new/branch2
+remote:
+To https://github.com/trupti-04oct/tr-repo.git
+ * [new branch]      branch2 -> branch2
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch2)
+$ git pull origin branch2
+From https://github.com/trupti-04oct/tr-repo
+ * branch            branch2    -> FETCH_HEAD
+Already up to date.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch2)
+$ ls
+ file1.txt   fileA.txt  'git commands.txt'   git-word.txt   new_file.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch2)
+$ git checkout branch3
+Switched to branch 'branch3'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch3)
+$ ls
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch3)
+$ git merge branch2
+Updating 0f80a5d..e877496
+Fast-forward
+ tr-repo/file1.txt        |   2 +
+ tr-repo/fileA.txt        |   0
+ tr-repo/git commands.txt |  47 ++++++++++++++++
+ tr-repo/git-word.txt     | 137 +++++++++++++++++++++++++++++++++++++++++++++++
+ tr-repo/new_file.txt     |   1 +
+ 5 files changed, 187 insertions(+)
+ create mode 100644 tr-repo/file1.txt
+ create mode 100644 tr-repo/fileA.txt
+ create mode 100644 tr-repo/git commands.txt
+ create mode 100644 tr-repo/git-word.txt
+ create mode 100644 tr-repo/new_file.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch3)
+$ ls
+ file1.txt   fileA.txt  'git commands.txt'   git-word.txt   new_file.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/tr-repo/tr-repo (branch3)
+$  file1.txt   fileA.txt  'git commands.txt'   git-word.txt   new_file.txt
+
+
+
