@@ -1,0 +1,47 @@
+git init # Initialization
+
+git clone <repository url> #Cloning
+
+cd repository name #Changing the directory
+
+touch filename.filetype #Creates file
+echo ""> filename.filetype #Creates file and
+Adds the content inside the file
+
+Cat filename.filetype #Views the content
+
+nano filename.filetype #Addas content in a file
+
+git add file name.filetype #Unstages the files
+
+git commit -m "message" #snapshot of changes
+
+git push origin main #pushing changes into repository
+
+git pull origin main #Getting or pulling the cxhanges
+
+ls  #gives list of files in the branch
+
+git status  # showa status
+
+git branch # shows branches
+
+git log # shows commit history
+
+git log --oneline # shows commit history and commit id
+
+git show <commit id> # shows the content in that commit id
+
+git switch main/branch # switches from one branch to another
+
+git checkout main/branch #enters inside branch/ main branch
+
+git fetch #data fetch
+
+git merge #merges one branch to another
+
+git remote origin
+
+git rm remote
+
+ 
