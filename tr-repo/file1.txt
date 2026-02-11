@@ -1,2 +1,0 @@
-this is github repository
-next day in learing git commands
