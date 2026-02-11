@@ -1,0 +1,303 @@
+git init
+Reinitialized existing Git repository in C:/Users/Om Computers/OneDrive/Desktop/.git/
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop (new_file)
+$ git clone https://github.com/trupti-04oct/trpt.git
+Cloning into 'trpt'...
+warning: You appear to have cloned an empty repository.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop (new_file)
+$ cd trpt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git config --global user.name "trupti-04oct"
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git config --global user.email "trupti.irakal@skillfloor.com"
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ echo "we are learning git and github" > file1.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ cat file1.txt
+we are learning git and github
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ touch file2.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ nano file2.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ cat file2.txt
+we are working and
+learinig
+git commands
+day 1
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ ls
+file1.txt  file2.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.txt
+        file2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git add file1.txt
+warning: in the working copy of 'file1.txt', LF will be replaced by CRLF the next time Git touches it
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2.txt
+
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git add file2.txt
+warning: in the working copy of 'file2.txt', LF will be replaced by CRLF the next time Git touches it
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.txt
+        new file:   file2.txt
+
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git commit -m "version 1"
+[main (root-commit) 1b0bb27] version 1
+ 2 files changed, 5 insertions(+)
+ create mode 100644 file1.txt
+ create mode 100644 file2.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 330 bytes | 330.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/trupti-04oct/trpt.git
+ * [new branch]      main -> main
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git pull origin main
+From https://github.com/trupti-04oct/trpt
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ ls
+file1.txt  file2.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ echo "pushing steps are done" >> file1.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ cat file1.txt
+we are learning git and github
+pushing steps are done
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ echo "new file created" > file3.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ cat file3.txt
+new file created
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git rm file2.txt
+rm 'file2.txt'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    file2.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file3.txt
+
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git add file1.txt
+warning: in the working copy of 'file1.txt', LF will be replaced by CRLF the next time Git touches it
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git add file3.tx
+fatal: pathspec 'file3.tx' did not match any files
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git add file3.txt
+warning: in the working copy of 'file3.txt', LF will be replaced by CRLF the next time Git touches it
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git commit -m "version 2"
+[main d3e079a] version 2
+ 3 files changed, 2 insertions(+), 4 deletions(-)
+ delete mode 100644 file2.txt
+ create mode 100644 file3.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 346 bytes | 173.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/trupti-04oct/trpt.git
+   1b0bb27..d3e079a  main -> main
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git pull origin main
+From https://github.com/trupti-04oct/trpt
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git checkout HEAD-1 -- file2.txt
+fatal: invalid reference: HEAD-1
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git log --oneline --all -- file2.txt
+d3e079a (HEAD -> main, origin/main) version 2
+1b0bb27 version 1
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git checkout d3e079a -- file2.txt
+error: pathspec 'file2.txt' did not match any file(s) known to git
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git log --all --name-only --oneline
+d3e079a (HEAD -> main, origin/main) version 2
+file1.txt
+file2.txt
+file3.txt
+1b0bb27 version 1
+file1.txt
+file2.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git checkout 1b0bb27 --file2.txt
+error: unknown option `file2.txt'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --[no-]guess          second guess 'git checkout <no-such-branch>' (default)
+    --[no-]overlay        use overlay mode (default)
+    -q, --[no-]quiet      suppress progress reporting
+    --[no-]recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --[no-]progress       force progress reporting
+    -m, --[no-]merge      perform a 3-way merge with the new branch
+    --[no-]conflict <style>
+                          conflict style (merge, diff3, or zdiff3)
+    -d, --[no-]detach     detach HEAD at named commit
+    -t, --[no-]track[=(direct|inherit)]
+                          set branch tracking configuration
+    -f, --[no-]force      force checkout (throw away local modifications)
+    --[no-]orphan <new-branch>
+                          new unborn branch
+    --[no-]overwrite-ignore
+                          update ignored files (default)
+    --[no-]ignore-other-worktrees
+                          do not check if another worktree is using this branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --[no-]patch      select hunks interactively
+    -U, --unified <n>     generate diffs with <n> lines context
+    --inter-hunk-context <n>
+                          show context between diff hunks up to the specified number of lines
+    --[no-]ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --[no-]pathspec-from-file <file>
+                          read pathspec from file
+    --[no-]pathspec-file-nul
+                          with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git checkout 1b0bb27 -- file2.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git commit -m "Restore deleted file"
+[main ec97ecb] Restore deleted file
+ 1 file changed, 4 insertions(+)
+ create mode 100644 file2.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 355 bytes | 355.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/trupti-04oct/trpt.git
+   d3e079a..ec97ecb  main -> main
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git pull origin mail
+fatal: couldn't find remote ref mail
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git pull origin main
+From https://github.com/trupti-04oct/trpt
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ ls
+file1.txt  file2.txt  file3.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git log --oneline
+ec97ecb (HEAD -> main, origin/main) Restore deleted file
+d3e079a version 2
+1b0bb27 version 1
+

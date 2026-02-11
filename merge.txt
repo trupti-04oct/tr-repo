@@ -1,0 +1,384 @@
+ git init
+Reinitialized existing Git repository in C:/Users/Om Computers/OneDrive/Desktop/.git/
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop (new_file)
+$ git clone https://github.com/trupti-04oct/trpt.git
+fatal: destination path 'trpt' already exists and is not an empty directory.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop (new_file)
+$ cd trpt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git pull origin main
+From https://github.com/trupti-04oct/trpt
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ ls
+file1.txt  file2.txt  file3.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git branch
+* main
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git log
+commit ec97ecb9f9c1088af3a650c11f3ac142cfc30700 (HEAD -> main, origin/main)
+Author: trupti-04oct <trupti.irakal@skillfloor.com>
+Date:   Sat Jan 31 20:23:29 2026 +0530
+
+    Restore deleted file
+
+commit d3e079ab3ae5c17fc209f7b13b1388bccb227b45
+Author: trupti-04oct <trupti.irakal@skillfloor.com>
+Date:   Sat Jan 31 20:12:17 2026 +0530
+
+    version 2
+
+commit 1b0bb2704d06a9aea4b6748b1118be5dcd49694e
+Author: trupti-04oct <trupti.irakal@skillfloor.com>
+Date:   Sat Jan 31 19:42:29 2026 +0530
+
+    version 1
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git log --oneline
+ec97ecb (HEAD -> main, origin/main) Restore deleted file
+d3e079a version 2
+1b0bb27 version 1
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git show 1b0bb27
+commit 1b0bb2704d06a9aea4b6748b1118be5dcd49694e
+Author: trupti-04oct <trupti.irakal@skillfloor.com>
+Date:   Sat Jan 31 19:42:29 2026 +0530
+
+    version 1
+
+diff --git a/file1.txt b/file1.txt
+new file mode 100644
+index 0000000..75e9df4
+--- /dev/null
++++ b/file1.txt
+@@ -0,0 +1 @@
++we are learning git and github
+diff --git a/file2.txt b/file2.txt
+new file mode 100644
+index 0000000..6c36ff5
+--- /dev/null
++++ b/file2.txt
+@@ -0,0 +1,4 @@
++we are working and
++learinig
++git commands
++day 1
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git show d3e079a
+commit d3e079ab3ae5c17fc209f7b13b1388bccb227b45
+Author: trupti-04oct <trupti.irakal@skillfloor.com>
+Date:   Sat Jan 31 20:12:17 2026 +0530
+
+    version 2
+
+diff --git a/file1.txt b/file1.txt
+index 75e9df4..9bd9c88 100644
+--- a/file1.txt
++++ b/file1.txt
+@@ -1 +1,2 @@
+ we are learning git and github
++pushing steps are done
+diff --git a/file2.txt b/file2.txt
+deleted file mode 100644
+index 6c36ff5..0000000
+--- a/file2.txt
++++ /dev/null
+@@ -1,4 +0,0 @@
+-we are working and
+-learinig
+-git commands
+-day 1
+diff --git a/file3.txt b/file3.txt
+new file mode 100644
+index 0000000..ce555e6
+--- /dev/null
++++ b/file3.txt
+@@ -0,0 +1 @@
++new file created
+"
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ "
+> '
+> "
+bash: $'\n\'\n': command not found
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git show ec97ecb
+commit ec97ecb9f9c1088af3a650c11f3ac142cfc30700 (HEAD -> main, origin/main)
+Author: trupti-04oct <trupti.irakal@skillfloor.com>
+Date:   Sat Jan 31 20:23:29 2026 +0530
+
+    Restore deleted file
+
+diff --git a/file2.txt b/file2.txt
+new file mode 100644
+index 0000000..6c36ff5
+--- /dev/null
++++ b/file2.txt
+@@ -0,0 +1,4 @@
++we are working and
++learinig
++git commands
++day 1
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git branch
+* main
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git checkout -b "Branch1"
+Switched to a new branch 'Branch1'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ git checkout -b "Branch2"
+Switched to a new branch 'Branch2'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch2)
+$ git checkout -b "Branch3"
+Switched to a new branch 'Branch3'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch3)
+$ git push origin Branch1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'Branch1' on GitHub by visiting:
+remote:      https://github.com/trupti-04oct/trpt/pull/new/Branch1
+remote:
+To https://github.com/trupti-04oct/trpt.git
+ * [new branch]      Branch1 -> Branch1
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch3)
+$ git push origin Branch2
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'Branch2' on GitHub by visiting:
+remote:      https://github.com/trupti-04oct/trpt/pull/new/Branch2
+remote:
+To https://github.com/trupti-04oct/trpt.git
+ * [new branch]      Branch2 -> Branch2
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch3)
+$ git push origin Branch3
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'Branch3' on GitHub by visiting:
+remote:      https://github.com/trupti-04oct/trpt/pull/new/Branch3
+remote:
+To https://github.com/trupti-04oct/trpt.git
+ * [new branch]      Branch3 -> Branch3
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch3)
+$ git checkout Branch1
+Switched to branch 'Branch1'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git switch Branch1
+Switched to branch 'Branch1'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ echo "creating branch on 1 feb" > file4.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ ls
+file1.txt  file2.txt  file3.txt  file4.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ git status
+On branch Branch1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file4.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ git commit -m "Branch 1 Data"
+On branch Branch1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file4.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ git add file4.txt
+warning: in the working copy of 'file4.txt', LF will be replaced by CRLF the next time Git touches it
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ git commit -m "Branch 1 Data"
+[Branch1 da5fba4] Branch 1 Data
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file4.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ git push origin Branch1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 302 bytes | 302.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/trupti-04oct/trpt.git
+   ec97ecb..da5fba4  Branch1 -> Branch1
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ git pull origin main
+From https://github.com/trupti-04oct/trpt
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ git pull origin branch1
+fatal: couldn't find remote ref branch1
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ git pull origin main
+From https://github.com/trupti-04oct/trpt
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ git branch
+* Branch1
+  Branch2
+  Branch3
+  main
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ git switch branch2
+Switched to branch 'branch2'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (branch2)
+$ ls
+file1.txt  file2.txt  file3.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (branch2)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ ls
+file1.txt  file2.txt  file3.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git switch Branch1
+Switched to branch 'Branch1'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ ls
+file1.txt  file2.txt  file3.txt  file4.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch1)
+$ git switch Branch2
+Switched to branch 'Branch2'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch2)
+$ ls
+file1.txt  file2.txt  file3.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch2)
+$ git checkout Branch2
+Already on 'Branch2'
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch2)
+$ git merge Branch1
+Updating ec97ecb..da5fba4
+Fast-forward
+ file4.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file4.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch2)
+$ ls
+file1.txt  file2.txt  file3.txt  file4.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch2)
+$ echo "branch 2 created merged the content" > file5.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch2)
+$ git add file5.txt
+warning: in the working copy of 'file5.txt', LF will be replaced by CRLF the next time Git touches it
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch2)
+$ git commit -m "merged and added a file"
+[Branch2 10d8d29] merged and added a file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file5.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch2)
+$ git push origin Branch2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 316 bytes | 316.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/trupti-04oct/trpt.git
+   ec97ecb..10d8d29  Branch2 -> Branch2
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch2)
+$ git pull origin main
+From https://github.com/trupti-04oct/trpt
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (Branch2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git merge Branch1
+Updating ec97ecb..da5fba4
+Fast-forward
+ file4.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file4.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git merge Branch2
+Updating da5fba4..10d8d29
+Fast-forward
+ file5.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file5.txt
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git commit -m "Merged to main"
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Datamites@DESKTOP-2V7N1IN MINGW64 ~/OneDrive/Desktop/trpt (main)
+$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/trupti-04oct/trpt.git
+   ec97ecb..10d8d29  main -> main
